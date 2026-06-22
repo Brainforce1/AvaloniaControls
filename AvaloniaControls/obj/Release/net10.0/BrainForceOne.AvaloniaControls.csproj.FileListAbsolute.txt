@@ -1,0 +1,14 @@
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\bin\Release\net10.0\BrainForceOne.AvaloniaControls.deps.json
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\bin\Release\net10.0\BrainForceOne.AvaloniaControls.dll
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\bin\Release\net10.0\BrainForceOne.AvaloniaControls.pdb
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.csproj.AssemblyReference.cache
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\Avalonia\Resources.Inputs.cache
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\Avalonia\resources
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.GeneratedMSBuildEditorConfig.editorconfig
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.AssemblyInfoInputs.cache
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.AssemblyInfo.cs
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.csproj.CoreCompileInputs.cache
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.dll
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\refint\BrainForceOne.AvaloniaControls.dll
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\BrainForceOne.AvaloniaControls.pdb
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Release\net10.0\ref\BrainForceOne.AvaloniaControls.dll

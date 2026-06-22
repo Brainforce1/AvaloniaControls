@@ -1,0 +1,24 @@
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:AvaloniaControlTesterApp"
+	xmlns:ring="clr-namespace:BrainForceOne.AvaloniaControls;assembly=BrainForceOne.AvaloniaControls"
+    x:Class="AvaloniaControlTesterApp.MainWindow"
+    Width="500" Height="500"
+    Background="#0B1A2A">
+
+	<Grid>
+
+		<ring:ProgressRingControl
+			x:Name="Ring"
+			Progress="0"
+			Supertitle="STREAMING FROM"
+			Subtitle="Server@Home"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Width="360"
+			Height="360"/>
+
+	</Grid>
+
+</Window>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AvaloniaControls/BrainForceOne.AvaloniaControls.csproj" />
+  <Project Path="AvaloniaControlTesterApp/AvaloniaControlTesterApp.csproj" Id="b473867a-c21f-4480-8091-291338d19404" />
+</Solution>

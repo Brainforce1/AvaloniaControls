@@ -1,0 +1,122 @@
+﻿
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BrainForceOne.AvaloniaControls">
+
+    <Styles.Resources>
+        <FontFamily x:Key="RobotoMonoFont">
+          avares://BrainForceOne.AvaloniaControls/Assets/Fonts/RobotoMono.ttf#Roboto Mono
+        </FontFamily>
+    </Styles.Resources>
+
+    <Design.PreviewWith>
+        <Border
+            Background="LightGray"
+            Padding="20">
+            <local:ProgressRingControl
+                Progress="80"
+                ProgressText="80%"
+                Subtitle="My Title" />
+        </Border>
+    </Design.PreviewWith>
+  <Style Selector="local|ProgressRingControl">
+
+    <!-- standaard grootte -->
+    <Setter Property="Width" Value="260"/>
+    <Setter Property="Height" Value="260"/>
+    <Setter Property="StrokeThickness" Value="10"/>
+
+    <Setter Property="Template">
+      <ControlTemplate>
+
+        <Grid>
+
+          <!-- Background -->
+          <Border Background="#0B1A2A" CornerRadius="12"/>
+
+          <!-- Ring container -->
+          <Grid  Margin="20"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Stretch">
+
+            <!-- ✅ BACKGROUND RING (zelfde rendering als progress) -->
+            <local:ProgressRingArc
+                Progress="100"
+                StrokeThickness="{TemplateBinding StrokeThickness}">
+              <local:ProgressRingArc.Stroke>
+                <SolidColorBrush Opacity="0.5" Color="#2F5F5F"/>
+              </local:ProgressRingArc.Stroke>
+            </local:ProgressRingArc>
+
+            <!-- ✅ PROGRESS RING -->
+            <local:ProgressRingArc x:Name="PART_Ring"
+                Progress="{TemplateBinding Progress}"
+                StrokeThickness="{TemplateBinding StrokeThickness}">
+
+              <local:ProgressRingArc.Stroke>
+                <ConicGradientBrush Center="0.5,0.5">
+                    <GradientStop Color="#34D399" Offset="0.0"/>
+                      <GradientStop Color="#22C55E" Offset="0.3"/>
+                      <GradientStop Color="#4ADE80" Offset="0.6"/>
+                      <GradientStop Color="#86EFAC" Offset="1.0"/>
+                    </ConicGradientBrush>
+              </local:ProgressRingArc.Stroke>
+
+              <!-- Glow effect (wordt geanimeerd in C#) -->
+              <local:ProgressRingArc.Effect>
+                <DropShadowEffect
+                    Color="#22C55E"
+                    BlurRadius="12"
+                    Opacity="0.6"/>
+              </local:ProgressRingArc.Effect>
+
+            </local:ProgressRingArc>
+
+            <!-- ✅ CENTER CONTENT -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="4">
+
+              <TextBlock
+                  Text="{TemplateBinding Supertitle}"
+                  FontSize="10"
+                  TextAlignment="Center"
+                  Width="160"
+                  FontFamily="{StaticResource RobotoMonoFont}"
+                  Foreground="#4edea3"
+                  HorizontalAlignment="Center"/>
+              <TextBlock
+                  Text="{TemplateBinding Subtitle}"
+                  TextAlignment="Center"
+                  Width="160"
+                  FontFamily="{StaticResource RobotoMonoFont}"
+                  FontSize="14"
+                  FontWeight="Bold"
+                  Foreground="#d8e2ff"
+                  HorizontalAlignment="Center"/>
+
+              <TextBlock
+                  Text="{TemplateBinding ProgressText}"
+                  TextAlignment="Center"
+                  Width="160"
+                  FontFamily="{StaticResource RobotoMonoFont}"
+                  FontSize="36"
+                  FontWeight="Bold"
+				  FontFeatures="tnum"
+                  Foreground="#adc6ff"
+                  HorizontalAlignment="Center"/>
+
+            </StackPanel>
+
+          </Grid>
+
+        </Grid>
+
+      </ControlTemplate>
+    </Setter>
+
+  </Style>
+
+</Styles>
