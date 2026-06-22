@@ -11,7 +11,7 @@
 	  <Company>BrainForce1</Company>
 	  <Description>Animated progress ring control for Avalonia</Description>
 	  <PackageTags>avalonia;controls;ui;progress;ring</PackageTags>
-	  <RepositoryUrl>https://github.com/...</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/Brainforce1/AvaloniaControls</RepositoryUrl>
 	  <PackageProjectUrl>https://github.com/...</PackageProjectUrl>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
