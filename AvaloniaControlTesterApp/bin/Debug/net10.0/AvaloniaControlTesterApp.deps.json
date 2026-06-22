@@ -12,9 +12,9 @@
           "Avalonia.Desktop": "12.0.4",
           "Avalonia.Fonts.Inter": "12.0.4",
           "Avalonia.Themes.Fluent": "12.0.4",
+          "AvaloniaControls": "1.0.1",
           "AvaloniaUI.DiagnosticsSupport": "2.2.1",
-          "ProgressRingControl": "1.0.0",
-          "BrainForceOne.AvaloniaControls": "1.0.0.0"
+          "BrainForceOne.AvaloniaControls": "1.0.1.0"
         },
         "runtime": {
           "AvaloniaControlTesterApp.dll": {}
@@ -529,7 +529,7 @@
           }
         }
       },
-      "ProgressRingControl/1.0.0": {
+      "AvaloniaControls/1.0.1": {
         "dependencies": {
           "Avalonia": "12.0.4",
           "Avalonia.Desktop": "12.0.4",
@@ -539,16 +539,16 @@
         },
         "runtime": {
           "BrainForceOne.AvaloniaControls.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
-      "BrainForceOne.AvaloniaControls/1.0.0.0": {
+      "BrainForceOne.AvaloniaControls/1.0.1.0": {
         "runtime": {
           "BrainForceOne.AvaloniaControls.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       }
@@ -749,12 +749,12 @@
       "path": "tmds.dbus.protocol/0.92.0",
       "hashPath": "tmds.dbus.protocol.0.92.0.nupkg.sha512"
     },
-    "ProgressRingControl/1.0.0": {
+    "AvaloniaControls/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "BrainForceOne.AvaloniaControls/1.0.0.0": {
+    "BrainForceOne.AvaloniaControls/1.0.1.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

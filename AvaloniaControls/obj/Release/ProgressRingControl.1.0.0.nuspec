@@ -6,8 +6,10 @@
     <authors>BrainForceOne</authors>
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/...</projectUrl>
     <description>Animated progress ring control for Avalonia</description>
-    <repository type="git" />
+    <tags>avalonia controls ui progress ring</tags>
+    <repository type="git" url="https://github.com/Brainforce1/AvaloniaControls" commit="64cd97f772ade74ddfdd6049bf0da722ffafdb30" />
     <dependencies>
       <group targetFramework="net10.0">
         <dependency id="Avalonia" version="12.0.4" exclude="Build,Analyzers" />

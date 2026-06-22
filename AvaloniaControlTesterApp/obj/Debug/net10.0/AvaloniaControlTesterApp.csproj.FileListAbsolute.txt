@@ -91,3 +91,4 @@ E:\Development\Sources\AvaloniaControls\AvaloniaControlTesterApp\obj\Debug\net10
 E:\Development\Sources\AvaloniaControls\AvaloniaControlTesterApp\obj\Debug\net10.0\AvaloniaControlTesterApp.pdb
 E:\Development\Sources\AvaloniaControls\AvaloniaControlTesterApp\obj\Debug\net10.0\AvaloniaControlTesterApp.genruntimeconfig.cache
 E:\Development\Sources\AvaloniaControls\AvaloniaControlTesterApp\obj\Debug\net10.0\ref\AvaloniaControlTesterApp.dll
+E:\Development\Sources\AvaloniaControls\AvaloniaControlTesterApp\obj\Debug\net10.0\AvaloniaControlTesterApp.sourcelink.json

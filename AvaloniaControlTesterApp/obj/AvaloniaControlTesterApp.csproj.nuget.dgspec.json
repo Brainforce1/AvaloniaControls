@@ -5,10 +5,10 @@
   },
   "projects": {
     "E:\\Development\\Sources\\AvaloniaControls\\AvaloniaControls\\BrainForceOne.AvaloniaControls.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "E:\\Development\\Sources\\AvaloniaControls\\AvaloniaControls\\BrainForceOne.AvaloniaControls.csproj",
-        "projectName": "ProgressRingControl",
+        "projectName": "AvaloniaControls",
         "projectPath": "E:\\Development\\Sources\\AvaloniaControls\\AvaloniaControls\\BrainForceOne.AvaloniaControls.csproj",
         "packagesPath": "C:\\Users\\giorg\\.nuget\\packages\\",
         "outputPath": "E:\\Development\\Sources\\AvaloniaControls\\AvaloniaControls\\obj\\",

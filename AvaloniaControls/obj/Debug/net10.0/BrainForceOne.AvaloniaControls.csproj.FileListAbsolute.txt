@@ -12,3 +12,4 @@ E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Debug\net10.0\Brain
 E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Debug\net10.0\refint\BrainForceOne.AvaloniaControls.dll
 E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Debug\net10.0\BrainForceOne.AvaloniaControls.pdb
 E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Debug\net10.0\ref\BrainForceOne.AvaloniaControls.dll
+E:\Development\Sources\AvaloniaControls\AvaloniaControls\obj\Debug\net10.0\BrainForceOne.AvaloniaControls.sourcelink.json

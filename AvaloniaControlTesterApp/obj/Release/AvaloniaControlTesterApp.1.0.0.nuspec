@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>AvaloniaControlTesterApp</authors>
     <description>Package Description</description>
-    <repository type="git" />
+    <repository type="git" commit="64cd97f772ade74ddfdd6049bf0da722ffafdb30" />
     <dependencies>
       <group targetFramework="net10.0">
         <dependency id="ProgressRingControl" version="1.0.0" exclude="Build,Analyzers" />

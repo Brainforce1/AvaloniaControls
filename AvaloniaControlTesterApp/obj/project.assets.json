@@ -677,7 +677,7 @@
           }
         }
       },
-      "ProgressRingControl/1.0.0": {
+      "AvaloniaControls/1.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
@@ -688,10 +688,10 @@
           "AvaloniaUI.DiagnosticsSupport": "2.2.1"
         },
         "compile": {
-          "bin/placeholder/ProgressRingControl.dll": {}
+          "bin/placeholder/AvaloniaControls.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ProgressRingControl.dll": {}
+          "bin/placeholder/AvaloniaControls.dll": {}
         }
       }
     }
@@ -1609,7 +1609,7 @@
         "tmds.dbus.protocol.nuspec"
       ]
     },
-    "ProgressRingControl/1.0.0": {
+    "AvaloniaControls/1.0.1": {
       "type": "project",
       "path": "../AvaloniaControls/BrainForceOne.AvaloniaControls.csproj",
       "msbuildProject": "../AvaloniaControls/BrainForceOne.AvaloniaControls.csproj"
@@ -1621,8 +1621,8 @@
       "Avalonia.Desktop >= 12.0.4",
       "Avalonia.Fonts.Inter >= 12.0.4",
       "Avalonia.Themes.Fluent >= 12.0.4",
-      "AvaloniaUI.DiagnosticsSupport >= 2.2.1",
-      "ProgressRingControl >= 1.0.0"
+      "AvaloniaControls >= 1.0.1",
+      "AvaloniaUI.DiagnosticsSupport >= 2.2.1"
     ]
   },
   "packageFolders": {
