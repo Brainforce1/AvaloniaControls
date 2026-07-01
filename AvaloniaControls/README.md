@@ -62,7 +62,10 @@ If you do not include the library styles, the controls will still work but defau
 A modern, animated ring indicator with optional glow, titles and configurable stroke.
 ---
 
-![Preview](https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/main/docs/placeholder.png)  
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/ProgressRing.gif" width="300" />
+
+
+
 
 ---
 
@@ -129,7 +132,7 @@ Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth
 A fully drawn gauge control with a needle, configurable sweep, glass effect and unit display.
 ---
 
-![Preview](https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/main/docs/placeholder.png)  
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/Speedometer.gif" width="300" />
 
 ---
 
@@ -300,16 +303,6 @@ Library default font: The library ships a default font and sets it in `Generic.a
 **Needle or ring renders under text**
 
 - Drawing order matters: draw background elements first, then text, then needle (or draw needle last) so it appears above text.  
-
----
-
-## Badges
-
-Replace placeholders with real badges/links:
-
-- NuGet: `https://www.nuget.org/packages/AvaloniaControls`  
-- Build: `https://dev.azure.com/...`  
-- License: MIT  
 
 ---
 
