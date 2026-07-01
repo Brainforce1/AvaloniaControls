@@ -6,26 +6,35 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 	  <!-- NuGet metadata -->
 	  <PackageId>AvaloniaControls</PackageId>
-	  <Version>1.0.1</Version>
+	  <Version>1.1.0</Version>
 	  <Authors>BrainForceOne</Authors>
 	  <Company>BrainForce1</Company>
-	  <Description>Animated progress ring control for Avalonia</Description>
-	  <PackageTags>avalonia;controls;ui;progress;ring</PackageTags>
+	  <Description>Nice controls for Avalonia</Description>
+	  <PackageTags>avalonia;controls;ui;progress;ring;speedometer</PackageTags>
 	  <RepositoryUrl>https://github.com/Brainforce1/AvaloniaControls</RepositoryUrl>
 	  <PackageProjectUrl>https://www.nuget.org/packages/AvaloniaControls/</PackageProjectUrl>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaXaml Remove="Themes\ProgressRingControl.axaml" />
+    <AvaloniaXaml Remove="Themes\Speedometer.axaml" />
   </ItemGroup>
   <ItemGroup>
     <AvaloniaResource Include="Themes\ProgressRingControl.axaml" />
+    <AvaloniaResource Include="Themes\Speedometer.axaml" />
   </ItemGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
+	<ItemGroup>
+		<None Include="docs/icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
 
-  <ItemGroup>
+	<PropertyGroup>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
     <PackageReference Include="Avalonia" Version="12.0.5" />
     <PackageReference Include="Avalonia.Desktop" Version="12.0.5" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.5" />
@@ -40,6 +49,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="docs\images\**\*.*" Pack="true" PackagePath="docs/images/" />
 	</ItemGroup>
 </Project>
