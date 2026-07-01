@@ -2,23 +2,38 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:AvaloniaControlTesterApp"
-	xmlns:ring="clr-namespace:BrainForceOne.AvaloniaControls;assembly=BrainForceOne.AvaloniaControls"
+	xmlns:controls="clr-namespace:BrainForceOne.AvaloniaControls;assembly=BrainForceOne.AvaloniaControls"
     x:Class="AvaloniaControlTesterApp.MainWindow"
     Width="500" Height="500"
     Background="#0B1A2A">
 
-	<Grid>
+	<Grid ColumnDefinitions="*,*">
 
-		<ring:ProgressRingControl
+		<controls:ProgressRingControl
 			x:Name="Ring"
 			Progress="0"
 			Supertitle="STREAMING FROM"
 			Subtitle="Server@Home"
 			HorizontalAlignment="Center"
+			StrokeThickness="20"
 			VerticalAlignment="Center"
-			Width="360"
-			Height="360"/>
+			Width="240"
+			Height="240"
+            Grid.Column="0"/>
 
+		<controls:Speedometer
+                        Width="240"
+                        Height="240"
+                        Position="Top"
+                        GlassEffect="True"
+                        SweepAngle="270"
+                        Minimum="30.0"
+                        Maximum="200.0"
+                        TextSize="30"
+                        UnitText="cm/h"
+                        UnitTextSize="12"
+                        Value="65"
+                        Grid.Column="1"/>
 	</Grid>
 
 </Window>

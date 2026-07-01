@@ -1,0 +1,33 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BrainForceOne.AvaloniaControls">
+       <Design.PreviewWith>
+            <Border
+                Background="DarkGray"
+                Padding="20">
+           <local:Speedometer
+                Width="100"
+                Height="100"
+                Position="Top"
+                GlassEffect="True"
+                SweepAngle="270"
+                Minimum="30.0"
+                Maximum="200.0"
+                TextSize="30"
+                UnitText="km/h"
+                UnitTextSize="12"
+                Value="65"/>
+            </Border>
+        </Design.PreviewWith>
+    <Style Selector="local|Speedometer">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Canvas x:Name="PART_SpeedometerCanvas"
+                           Width="{TemplateBinding Width}"
+                           Height="{TemplateBinding Height}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

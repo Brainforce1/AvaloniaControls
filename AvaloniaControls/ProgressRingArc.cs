@@ -21,10 +21,12 @@ public class ProgressRingArc : Control
     static ProgressRingArc()
     {
         ProgressProperty.Changed.AddClassHandler<ProgressRingArc>((x, e) => x.InvalidateVisual());
+        StrokeThicknessProperty.Changed.AddClassHandler<ProgressRingArc>((x, e) => x.InvalidateVisual());
+        StrokeProperty.Changed.AddClassHandler<ProgressRingArc>((x, e) => x.InvalidateVisual());
     }
 
     public static readonly StyledProperty<double> StrokeThicknessProperty =
-        AvaloniaProperty.Register<ProgressRingControl, double>(nameof(StrokeThickness), 8);
+        AvaloniaProperty.Register<ProgressRingArc, double>(nameof(StrokeThickness), 8);
 
 
     public static readonly StyledProperty<IBrush> StrokeProperty =
@@ -54,7 +56,6 @@ public class ProgressRingArc : Control
         var rect = Bounds;
         var center = rect.Center;
 
-        // ✅ CRUCIAAL: correct gecentreerde radius
         double radius = (Math.Min(rect.Width, rect.Height) / 2) - (thickness / 2);
 
         var pen = new Pen(Stroke, thickness)
@@ -62,7 +63,6 @@ public class ProgressRingArc : Control
             LineCap = PenLineCap.Round
         };
 
-        // ✅ 100% = volledige cirkel tekenen (anders verdwijnt arc)
         if (Progress >= 100)
         {
             context.DrawEllipse(
@@ -75,15 +75,12 @@ public class ProgressRingArc : Control
             return;
         }
 
-        // ✅ 0% = niets tekenen
         if (Progress <= 0)
             return;
 
-        // ✅ Normale progress
-        double startAngle = -90; // start bovenaan
+        double startAngle = -90; // start on top
         double sweepAngle = 360 * (Progress / 100);
 
-        // ✅ voorkomt mini blokje bij heel kleine progress
         if (sweepAngle < 0.5)
             sweepAngle = 0.5;
 

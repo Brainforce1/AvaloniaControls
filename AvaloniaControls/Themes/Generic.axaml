@@ -3,22 +3,53 @@
         xmlns:local="clr-namespace:BrainForceOne.AvaloniaControls">
   
     <Design.PreviewWith>
-        <Border
-            Background="LightGray"
-            Padding="20">
-            <local:ProgressRingControl
-                Progress="80"
-                ProgressText="80%"
-                Subtitle="My Title" />
-        </Border>
+
+        <Border Background="LightGray" Padding="20">
+                <Grid ColumnDefinitions="*,*">
+
+                    <!-- ProgressRing control -->
+                    <local:ProgressRingControl
+                        StrokeThickness="33"
+                        GlowEnabled="True"
+                        GlowColor="#3B82F6"
+                        GlowBlurRadius="24"
+                        GlowOpacity="0.85"
+                        Progress="50"
+                        Subtitle="My Title"
+                        FontFamily="{StaticResource RobotoMonoFont}"
+                        Grid.Column="0" />
+
+                    <!-- Speedometer control -->
+                    <local:Speedometer
+                        Width="300"
+                        Height="300"
+                        Position="Top"
+                        GlassEffect="True"
+                        SweepAngle="270"
+                        Minimum="30.0"
+                        Maximum="200.0"
+                        TextSize="30"
+                        UnitText="km/h"
+                        UnitTextSize="12"
+                        FontFamily="{StaticResource RobotoMonoFont}"
+                        Value="65"
+                        Grid.Column="1"/>
+
+                </Grid>
+            </Border>
     </Design.PreviewWith>
-  <!-- Fonts, brushes, resources -->
+    <Style Selector="local|Speedometer">
+        <Setter Property="FontFamily" Value="{StaticResource RobotoMonoFont}" />
+    </Style>
+    <Style Selector="local|ProgressRingControl">
+        <Setter Property="FontFamily" Value="{StaticResource RobotoMonoFont}" />
+    </Style>
     <Styles.Resources>
         <FontFamily x:Key="RobotoMonoFont">
           avares://BrainForceOne.AvaloniaControls/Assets/Fonts/RobotoMono.ttf#Roboto Mono
         </FontFamily>
     </Styles.Resources>
-
   <!-- Include styles per control -->
   <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/ProgressRingControl.axaml" />
+  <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/Speedometer.axaml" />
 </Styles>

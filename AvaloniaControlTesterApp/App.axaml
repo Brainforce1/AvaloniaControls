@@ -6,6 +6,6 @@
 
     <Application.Styles>
         <FluentTheme />
-        <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/ProgressRingControl.axaml"/>  
+         <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/Generic.axaml"/>
     </Application.Styles>
 </Application>

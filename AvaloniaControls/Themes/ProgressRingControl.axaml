@@ -14,9 +14,9 @@
                 Subtitle="My Title" />
         </Border>
     </Design.PreviewWith>
+
   <Style Selector="local|ProgressRingControl">
 
-    <!-- standaard grootte -->
     <Setter Property="Width" Value="260"/>
     <Setter Property="Height" Value="260"/>
     <Setter Property="StrokeThickness" Value="10"/>
@@ -28,46 +28,28 @@
 
           <!-- Background -->
           <Border Background="#0B1A2A" CornerRadius="12"/>
-
+             
           <!-- Ring container -->
           <Grid  Margin="20"
       HorizontalAlignment="Stretch"
       VerticalAlignment="Stretch">
 
-            <!-- ✅ BACKGROUND RING (zelfde rendering als progress) -->
+            <!-- BACKGROUND RING-->
             <local:ProgressRingArc
                 Progress="100"
-                StrokeThickness="{TemplateBinding StrokeThickness}">
-              <local:ProgressRingArc.Stroke>
-                <SolidColorBrush Opacity="0.5" Color="#2F5F5F"/>
-              </local:ProgressRingArc.Stroke>
+                StrokeThickness="{TemplateBinding StrokeThickness}"
+                Stroke="{TemplateBinding BackgroundRingBrush}">
             </local:ProgressRingArc>
 
-            <!-- ✅ PROGRESS RING -->
+            <!-- PROGRESS RING -->
             <local:ProgressRingArc x:Name="PART_Ring"
                 Progress="{TemplateBinding Progress}"
-                StrokeThickness="{TemplateBinding StrokeThickness}">
-
-              <local:ProgressRingArc.Stroke>
-                <ConicGradientBrush Center="0.5,0.5">
-                    <GradientStop Color="#34D399" Offset="0.0"/>
-                      <GradientStop Color="#22C55E" Offset="0.3"/>
-                      <GradientStop Color="#4ADE80" Offset="0.6"/>
-                      <GradientStop Color="#86EFAC" Offset="1.0"/>
-                    </ConicGradientBrush>
-              </local:ProgressRingArc.Stroke>
-
-              <!-- Glow effect (wordt geanimeerd in C#) -->
-              <local:ProgressRingArc.Effect>
-                <DropShadowEffect
-                    Color="#22C55E"
-                    BlurRadius="12"
-                    Opacity="0.6"/>
-              </local:ProgressRingArc.Effect>
+                StrokeThickness="{TemplateBinding StrokeThickness}"
+                Stroke="{TemplateBinding RingBrush}">
 
             </local:ProgressRingArc>
 
-            <!-- ✅ CENTER CONTENT -->
+            <!-- CENTER CONTENT -->
             <StackPanel
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
@@ -78,14 +60,14 @@
                   FontSize="10"
                   TextAlignment="Center"
                   Width="160"
-                  FontFamily="{StaticResource RobotoMonoFont}"
+                  FontFamily="{TemplateBinding FontFamily}"
                   Foreground="#4edea3"
                   HorizontalAlignment="Center"/>
               <TextBlock
                   Text="{TemplateBinding Subtitle}"
                   TextAlignment="Center"
                   Width="160"
-                  FontFamily="{StaticResource RobotoMonoFont}"
+                  FontFamily="{TemplateBinding FontFamily}"
                   FontSize="14"
                   FontWeight="Bold"
                   Foreground="#d8e2ff"
@@ -95,7 +77,7 @@
                   Text="{TemplateBinding ProgressText}"
                   TextAlignment="Center"
                   Width="160"
-                  FontFamily="{StaticResource RobotoMonoFont}"
+                  FontFamily="{TemplateBinding FontFamily}"
                   FontSize="36"
                   FontWeight="Bold"
 				  FontFeatures="tnum"
