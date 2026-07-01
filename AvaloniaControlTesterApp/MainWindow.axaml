@@ -22,6 +22,7 @@
             Grid.Column="0"/>
 
 		<controls:Speedometer
+            x:Name="Speedometer"
                         Width="240"
                         Height="240"
                         Position="Top"

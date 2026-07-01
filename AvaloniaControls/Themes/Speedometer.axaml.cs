@@ -19,9 +19,16 @@ namespace BrainForceOne.AvaloniaControls;
         public static readonly StyledProperty<int> TextSizeProperty = AvaloniaProperty.Register<Speedometer, int>(nameof(TextSize), 16);
         public static readonly StyledProperty<string?> UnitProperty = AvaloniaProperty.Register<Speedometer, string?>(nameof(UnitText), null);
         public static readonly StyledProperty<double> UnitTextSizeProperty = AvaloniaProperty.Register<Speedometer, double>(nameof(UnitTextSize), 12);
+        public static readonly StyledProperty<bool> PreviewModeProperty = AvaloniaProperty.Register<ProgressRingControl, bool>(nameof(PreviewMode), false);
+
+        public bool PreviewMode
+        {
+            get => GetValue(PreviewModeProperty);
+            set => SetValue(PreviewModeProperty, value);
+        }
 
 
-        public double UnitTextSize
+    public double UnitTextSize
         {
             get => GetValue(UnitTextSizeProperty);
             set => SetValue(UnitTextSizeProperty, value);
@@ -92,27 +99,6 @@ namespace BrainForceOne.AvaloniaControls;
             set => SetValue(NeedleColorProperty, value);
         }
 
-        public void StartProgress()
-        {
-            DispatcherTimer timer = new DispatcherTimer
-            {
-                Interval = TimeSpan.FromMilliseconds(16)
-            };
-
-            double v = Minimum;
-            timer.Tick += (_, _) =>
-            {
-                v += 0.5;
-                Value = v % (Maximum - Minimum) + Minimum;
-            };
-
-            timer.Start();
-        }
-
-        public Speedometer()
-        {
-            StartProgress();
-        }
 
         static Speedometer()
         {

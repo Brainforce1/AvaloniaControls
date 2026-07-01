@@ -47,44 +47,8 @@ public class ProgressRingControl : TemplatedControl
         SetCurrentValue(RingBrushProperty, CreateGlowBrush(DefaultGlowColor));
         SetCurrentValue(BackgroundRingBrushProperty, new SolidColorBrush(DefaultBackgroundRingColor));
 
-        if (Design.IsDesignMode)
-        {
-            PreviewMode = true;
-            Progress = 50; 
-        }
-        else
-        {
-            StartAnimation();
-        }
     }
 
-
-    private DispatcherTimer? _timer;
-
-
-    private void StartAnimation()
-    {
-        _timer = new DispatcherTimer
-        {
-            Interval = TimeSpan.FromMilliseconds(50)
-        };
-
-        int direction = 1;
-
-        _timer.Tick += (_, _) =>
-        {
-            Progress += direction;
-
-            if (Progress >= 100)
-                direction = -1;
-            else if (Progress <= 0)
-                direction = 1;
-
-            InvalidateVisual();
-        };
-
-        _timer.Start();
-    }
 
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
