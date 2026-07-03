@@ -6,7 +6,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 	  <!-- NuGet metadata -->
 	  <PackageId>BrainforceControls</PackageId>
-	  <Version>1.1.3</Version>
+	  <Version>1.2.0</Version>
 	  <Authors>BrainForceOne</Authors>
 	  <Company>BrainForce1</Company>
 	  <Description>Nice controls for Avalonia®</Description>
