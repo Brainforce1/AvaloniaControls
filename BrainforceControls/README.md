@@ -61,7 +61,7 @@ If you do not include the library styles, the controls will still work but defau
 A modern, animated ring indicator with optional glow, titles and configurable stroke.
 ---
 
-<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/ProgressRing.gif" width="300" />
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/ProgressRing.gif" width="300" />
 
 
 
@@ -131,7 +131,7 @@ Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth
 A fully drawn gauge control with a needle, configurable sweep, glass effect and unit display.
 ---
 
-<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/Speedometer.gif" width="300" />
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/Speedometer.gif" width="300" />
 
 ---
 
@@ -250,7 +250,7 @@ Below is the exact XAML sample used in the test app:
 
 De `Thermometer` is een Avalonia‑control die een verticale temperatuurindicator toont met een kleurverloop tussen `StartColor` en `EndColor`. De control ondersteunt ticks, glaseffect, eenheidstekst en een configureerbare bulb‑grootte.
 
-<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/Thermometer.gif" width="300" />
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/Thermometer.gif" width="300" />
 
 ### Properties
 
