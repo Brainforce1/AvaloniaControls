@@ -250,6 +250,8 @@ Below is the exact XAML sample used in the test app:
 
 De `Thermometer` is een Avalonia‑control die een verticale temperatuurindicator toont met een kleurverloop tussen `StartColor` en `EndColor`. De control ondersteunt ticks, glaseffect, eenheidstekst en een configureerbare bulb‑grootte.
 
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/AvaloniaControls/docs/images/Thermometer.gif" width="300" />
+
 ### Properties
 
 | Eigenschap | Type | Default | Beschrijving |

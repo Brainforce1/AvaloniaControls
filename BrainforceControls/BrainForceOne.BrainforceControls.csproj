@@ -6,7 +6,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 	  <!-- NuGet metadata -->
 	  <PackageId>BrainforceControls</PackageId>
-	  <Version>1.2.0</Version>
+	  <Version>1.2.1</Version>
 	  <Authors>BrainForceOne</Authors>
 	  <Company>BrainForce1</Company>
 	  <Description>Nice controls for Avalonia®</Description>
@@ -20,6 +20,7 @@
     <AvaloniaXaml Remove="Themes\Speedometer.axaml" />
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Include="Themes\Generic.axaml" />
     <AvaloniaResource Include="Themes\ProgressRingControl.axaml" />
     <AvaloniaResource Include="Themes\Speedometer.axaml" />
   </ItemGroup>
