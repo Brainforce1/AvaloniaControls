@@ -7,7 +7,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BrainForceOne.AvaloniaControls;
+namespace BrainForceOne.BrainforceControls;
 
 public class ProgressRingControl : TemplatedControl
 {

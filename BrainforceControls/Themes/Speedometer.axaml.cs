@@ -5,7 +5,7 @@ using Avalonia.Media;
 using Avalonia.Threading;
 using System;
 
-namespace BrainForceOne.AvaloniaControls;
+namespace BrainForceOne.BrainforceControls;
     public partial class Speedometer : TemplatedControl
     {
         public static readonly StyledProperty<double> ValueProperty = AvaloniaProperty.Register<Speedometer, double>(nameof(Value), 0);

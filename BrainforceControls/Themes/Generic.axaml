@@ -1,11 +1,11 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:BrainForceOne.AvaloniaControls">
+        xmlns:local="clr-namespace:BrainForceOne.BrainforceControls">
   
     <Design.PreviewWith>
 
         <Border Background="LightGray" Padding="20">
-                <Grid ColumnDefinitions="*,*">
+                <Grid ColumnDefinitions="*,*,*">
 
                     <!-- ProgressRing control -->
                     <local:ProgressRingControl
@@ -34,6 +34,25 @@
                         FontFamily="{StaticResource RobotoMonoFont}"
                         Value="65"
                         Grid.Column="1"/>
+                    <!-- Thermometer control -->
+                    <local:Thermometer
+                        Width="150"
+                        Height="400"
+                        Minimum="0"
+                        Maximum="120"
+                        Value="90"
+                        BulbSize="40"
+                        StartColor="LimeGreen"
+                        EndColor="Red"
+                        ShowTicks="True"
+                        Unit="°C"
+                        TickInterval="10"
+                        TickColor="Red"
+                        TickPlacement="Left"
+                        ValueTextColor="Red"
+                        FontFamily="{StaticResource RobotoMonoFont}"
+                        GlassEffect="True"
+                         Grid.Column="2"/>
 
                 </Grid>
             </Border>
@@ -41,15 +60,27 @@
     <Style Selector="local|Speedometer">
         <Setter Property="FontFamily" Value="{StaticResource RobotoMonoFont}" />
     </Style>
+     <Style Selector="local|Thermometer">
+
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="500"/>
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="Transparent"/>
+            </ControlTemplate>
+        </Setter>
+
+    </Style>
     <Style Selector="local|ProgressRingControl">
         <Setter Property="FontFamily" Value="{StaticResource RobotoMonoFont}" />
     </Style>
     <Styles.Resources>
         <FontFamily x:Key="RobotoMonoFont">
-          avares://BrainForceOne.AvaloniaControls/Assets/Fonts/RobotoMono.ttf#Roboto Mono
+          avares://BrainForceOne.BrainforceControls/Assets/Fonts/RobotoMono.ttf#Roboto Mono
         </FontFamily>
     </Styles.Resources>
   <!-- Include styles per control -->
-  <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/ProgressRingControl.axaml" />
-  <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/Speedometer.axaml" />
+  <StyleInclude Source="avares://BrainForceOne.BrainforceControls/Themes/ProgressRingControl.axaml" />
+  <StyleInclude Source="avares://BrainForceOne.BrainforceControls/Themes/Speedometer.axaml" />
 </Styles>

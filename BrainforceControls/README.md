@@ -1,7 +1,7 @@
-# AvaloniaControls
-**Modern Avalonia UI controls — ProgressRingControl and Speedometer**
+# BrainforceControls
+**Modern UI controls for Avalonia®**
 
-A small, focused library of high-quality, render-based controls for Avalonia: a configurable **ProgressRingControl** and a fully drawn **Speedometer** with smooth animations, glow effects and custom font support.
+A small, focused library of high-quality, render-based controls for Avalonia®.
 
 
 ## Table of contents
@@ -21,7 +21,6 @@ A small, focused library of high-quality, render-based controls for Avalonia: a 
 - Custom fonts  
 - Designer vs runtime note  
 - Troubleshooting  
-- Badges  
 - License  
 
 ---
@@ -30,13 +29,13 @@ A small, focused library of high-quality, render-based controls for Avalonia: a 
 
 Install from NuGet:
 
-    dotnet add package AvaloniaControls
+    dotnet add package BrainforceControls
 
 Or via Package Manager:
 
-    Install-Package AvaloniaControls
+    Install-Package BrainforceControls
 
-The assembly name is **BrainForceOne.AvaloniaControls**.
+The assembly name is **BrainForceOne.BrainforceControls**.
 
 ---
 
@@ -49,7 +48,7 @@ To ensure the controls render with their default styles (including bundled fonts
       <Application.Styles>
         <FluentTheme Mode="Dark"/>
         <!-- Include the control library styles so defaults (fonts, templates) are applied -->
-        <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/Generic.axaml"/>
+        <StyleInclude Source="avares://BrainForceOne.BrainforceControls/Themes/Generic.axaml"/>
       </Application.Styles>
     </Application>
 
@@ -209,7 +208,7 @@ Below is the exact XAML sample used in the test app:
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:AvaloniaControlTesterApp"
-        xmlns:controls="clr-namespace:BrainForceOne.AvaloniaControls;assembly=BrainForceOne.AvaloniaControls"
+        xmlns:controls="clr-namespace:BrainForceOne.BrainforceControls;assembly=BrainForceOne.BrainforceControls"
         x:Class="AvaloniaControlTesterApp.MainWindow"
         Width="500" Height="500"
         Background="#0B1A2A">
@@ -247,6 +246,47 @@ Below is the exact XAML sample used in the test app:
     </Window>
 
 ---
+## Thermometer Control
+
+De `Thermometer` is een Avalonia‑control die een verticale temperatuurindicator toont met een kleurverloop tussen `StartColor` en `EndColor`. De control ondersteunt ticks, glaseffect, eenheidstekst en een configureerbare bulb‑grootte.
+
+### Properties
+
+| Eigenschap | Type | Default | Beschrijving |
+|-----------|------|---------|--------------|
+| `Minimum` | `double` | `0` | Minimumwaarde van de schaal |
+| `Maximum` | `double` | `100` | Maximumwaarde van de schaal |
+| `Value` | `double` | `50` | Huidige waarde |
+| `StartColor` | `Color` | `LimeGreen` | Kleur bij minimumwaarde |
+| `EndColor` | `Color` | `Red` | Kleur bij maximumwaarde |
+| `TickColor` | `Color` | `Black` | Kleur van de schaalverdeling |
+| `GlassEffect` | `bool` | `true` | Activeert een glaseffect |
+| `ShowTicks` | `bool` | `true` | Toont schaalverdeling |
+| `TickInterval` | `double` | `10` | Afstand tussen ticks |
+| `TickPlacement` | `TickPlacement` | `Right` | Plaatsing van ticks |
+| `BulbSize` | `double` | `50` | Grootte van de bol onderaan |
+| `Unit` | `string` | `°C` | Eenheidstekst |
+
+### XAML Voorbeeld
+
+```xml
+<thermo:Thermometer
+    Width="150"
+    Height="400"
+    Minimum="0"
+    Maximum="120"
+    Value="90"
+    BulbSize="40"
+    StartColor="LimeGreen"
+    EndColor="Red"
+    ShowTicks="True"
+    Unit="°C"
+    TickInterval="10"
+    TickColor="Red"
+    TickPlacement="Left"
+    GlassEffect="True"/>
+```
+---
 
 ## Custom fonts
 
@@ -277,7 +317,7 @@ Library default font: The library ships a default font and sets it in `Generic.a
 ## Designer vs runtime note
 
 - Designer preview often loads library styles and simulates a stable render loop.  
-- Runtime requires you to include `avares://BrainForceOne.AvaloniaControls/Themes/Generic.axaml` in your `Application.Styles` to apply the library defaults (fonts, templates, resources).  
+- Runtime requires you to include `avares://BrainForceOne.BrainforceControls/Themes/Generic.axaml` in your `Application.Styles` to apply the library defaults (fonts, templates, resources).  
 - If fonts or styles appear in preview but not at runtime, check that your app includes the `StyleInclude` and that the assembly name in `avares://` URIs matches exactly.  
 
 ---

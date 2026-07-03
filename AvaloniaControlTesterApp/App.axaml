@@ -6,6 +6,6 @@
 
     <Application.Styles>
         <FluentTheme />
-         <StyleInclude Source="avares://BrainForceOne.AvaloniaControls/Themes/Generic.axaml"/>
+         <StyleInclude Source="avares://BrainForceOne.BrainforceControls/Themes/Generic.axaml"/>
     </Application.Styles>
 </Application>

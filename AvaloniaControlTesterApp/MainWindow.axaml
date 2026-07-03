@@ -2,12 +2,12 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:AvaloniaControlTesterApp"
-	xmlns:controls="clr-namespace:BrainForceOne.AvaloniaControls;assembly=BrainForceOne.AvaloniaControls"
+	xmlns:controls="clr-namespace:BrainForceOne.BrainforceControls;assembly=BrainForceOne.BrainforceControls"
     x:Class="AvaloniaControlTesterApp.MainWindow"
-    Width="500" Height="500"
+    Width="700" Height="500"
     Background="#0B1A2A">
 
-	<Grid ColumnDefinitions="*,*">
+	<Grid ColumnDefinitions="*,*,*">
 
 		<controls:ProgressRingControl
 			x:Name="Ring"
@@ -35,6 +35,26 @@
                         UnitTextSize="12"
                         Value="65"
                         Grid.Column="1"/>
+
+          <controls:Thermometer
+              x:Name="Thermometer"
+                        Width="150"
+                        Height="400"
+                        Minimum="0"
+                        Maximum="100"
+                        Value="90"
+                        BulbSize="40"
+                        StartColor="LimeGreen"
+                        EndColor="Red"
+                        ShowTicks="True"
+                        Unit="°C"
+                        TickInterval="10"
+                        TickColor="Red"
+                        TickPlacement="Left"
+                        ValueTextColor="LimeGreen"
+                        FontFamily="{StaticResource RobotoMonoFont}"
+                        GlassEffect="True"
+                         Grid.Column="2"/>
 	</Grid>
 
 </Window>

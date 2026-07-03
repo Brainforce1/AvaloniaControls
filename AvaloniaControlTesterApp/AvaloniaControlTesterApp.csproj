@@ -19,6 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AvaloniaControls\BrainForceOne.AvaloniaControls.csproj" />
+    <ProjectReference Include="..\BrainforceControls\BrainForceOne.BrainforceControls.csproj" />
   </ItemGroup>
 </Project>

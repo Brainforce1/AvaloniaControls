@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Media;
 using System;
 
-namespace BrainForceOne.AvaloniaControls;
+namespace BrainForceOne.BrainforceControls;
 
 public class ProgressRingArc : Control
 {

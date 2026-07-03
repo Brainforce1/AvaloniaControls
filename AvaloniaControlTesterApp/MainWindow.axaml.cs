@@ -24,12 +24,14 @@ namespace AvaloniaControlTesterApp
                 {
                     Ring.Progress = i;
                     Speedometer.Value = i + 30;
+                    Thermometer.Value = i;
                     await Task.Delay(delay);
                 }
 
                 // reset
                 Ring.Progress = 0;
                 Speedometer.Value = 30;
+                Thermometer.Value = 0;
                 await Task.Delay(300); 
             }
         }
