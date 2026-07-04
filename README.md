@@ -122,7 +122,7 @@ A modern, animated ring indicator with optional glow, titles and configurable st
         }
     }
 
-Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth, jitter-free animations use render-based updates (update in `Render()` using elapsed time and call `InvalidateVisual()`), or Avalonia composition animations.
+Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth, jitter-free animations use render-based updates (update in `Render()` using elapsed time and call `InvalidateVisual()`), or Avalonia® composition animations.
 
 ---
 
@@ -248,28 +248,28 @@ Below is the exact XAML sample used in the test app:
 ---
 ## Thermometer Control
 
-De `Thermometer` is een Avalonia‑control die een verticale temperatuurindicator toont met een kleurverloop tussen `StartColor` en `EndColor`. De control ondersteunt ticks, glaseffect, eenheidstekst en een configureerbare bulb‑grootte.
+The `Thermometer` is an Avalonia® control that displays a vertical temperature indicator with a gradient between `StartColor` and `EndColor`. The control supports ticks, glass effect, unit text, and a configurable bulb size.
 
 <img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/Thermometer.gif" width="300" />
 
 ### Properties
 
-| Eigenschap | Type | Default | Beschrijving |
+| Property | Type | Default | Description |
 |-----------|------|---------|--------------|
-| `Minimum` | `double` | `0` | Minimumwaarde van de schaal |
-| `Maximum` | `double` | `100` | Maximumwaarde van de schaal |
-| `Value` | `double` | `50` | Huidige waarde |
-| `StartColor` | `Color` | `LimeGreen` | Kleur bij minimumwaarde |
-| `EndColor` | `Color` | `Red` | Kleur bij maximumwaarde |
-| `TickColor` | `Color` | `Black` | Kleur van de schaalverdeling |
-| `GlassEffect` | `bool` | `true` | Activeert een glaseffect |
-| `ShowTicks` | `bool` | `true` | Toont schaalverdeling |
-| `TickInterval` | `double` | `10` | Afstand tussen ticks |
-| `TickPlacement` | `TickPlacement` | `Right` | Plaatsing van ticks |
-| `BulbSize` | `double` | `50` | Grootte van de bol onderaan |
-| `Unit` | `string` | `°C` | Eenheidstekst |
+| `Minimum` | `double` | `0` | Minimum value of the scale |
+| `Maximum` | `double` | `100` | Maximum value of the scale |
+| `Value` | `double` | `50` | Current value |
+| `StartColor` | `Color` | `LimeGreen` | Color at minimum value |
+| `EndColor` | `Color` | `Red` | Color at maximum value |
+| `TickColor` | `Color` | `Black` | Color of the scale ticks |
+| `GlassEffect` | `bool` | `true` | Enables glass effect |
+| `ShowTicks` | `bool` | `true` | Shows scale ticks |
+| `TickInterval` | `double` | `10` | Distance between ticks |
+| `TickPlacement` | `TickPlacement` | `Right` | Placement of ticks |
+| `BulbSize` | `double` | `50` | Size of the bulb at the bottom |
+| `Unit` | `string` | `°C` | Unit text |
 
-### XAML Voorbeeld
+### XAML Example
 
 ```xml
 <thermo:Thermometer
@@ -292,11 +292,11 @@ De `Thermometer` is een Avalonia‑control die een verticale temperatuurindicato
 
 ## Custom fonts
 
-The controls support `FontFamily` (same pattern as Avalonia controls). You can set a font from your app or use the library default.
+The controls support `FontFamily` (same pattern as Avalonia® controls). You can set a font from your app or use the library default.
 
 Example: use an embedded font from your app:
 
-1. Add font file to your app project (for example `Assets/Fonts/MyFont.ttf`) and include it as an Avalonia resource in the app project file:
+1. Add font file to your app project (for example `Assets/Fonts/MyFont.ttf`) and include it as an Avalonia® resource in the app project file:
 
        <ItemGroup>
          <AvaloniaResource Include="Assets/Fonts/MyFont.ttf" />
@@ -339,7 +339,7 @@ Library default font: The library ships a default font and sets it in `Generic.a
 **Jittery or jumpy animations**
 
 - Avoid `DispatcherTimer` or `Task.Delay` for frame-sensitive animations.  
-- Use render-based updates (update animation state in `Render()` using elapsed time and call `InvalidateVisual()`), or use Avalonia composition animations.  
+- Use render-based updates (update animation state in `Render()` using elapsed time and call `InvalidateVisual()`), or use Avalonia® composition animations.  
 - If you must use timers, compute motion based on elapsed time (delta) rather than fixed increments.  
 
 **Needle or ring renders under text**
