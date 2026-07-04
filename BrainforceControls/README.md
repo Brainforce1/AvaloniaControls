@@ -122,7 +122,7 @@ A modern, animated ring indicator with optional glow, titles and configurable st
         }
     }
 
-Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth, jitter-free animations use render-based updates (update in `Render()` using elapsed time and call `InvalidateVisual()`), or Avalonia composition animations.
+Recommendation: `Task.Delay` or `DispatcherTimer` are fine for demos. For smooth, jitter-free animations use render-based updates (update in `Render()` using elapsed time and call `InvalidateVisual()`), or Avalonia® composition animations.
 
 ---
 
@@ -248,7 +248,7 @@ Below is the exact XAML sample used in the test app:
 ---
 ## Thermometer Control
 
-The `Thermometer` is an Avalonia control that displays a vertical temperature indicator with a gradient between `StartColor` and `EndColor`. The control supports ticks, glass effect, unit text, and a configurable bulb size.
+The `Thermometer` is an Avalonia® control that displays a vertical temperature indicator with a gradient between `StartColor` and `EndColor`. The control supports ticks, glass effect, unit text, and a configurable bulb size.
 
 <img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/Thermometer.gif" width="300" />
 
@@ -292,11 +292,11 @@ The `Thermometer` is an Avalonia control that displays a vertical temperature in
 
 ## Custom fonts
 
-The controls support `FontFamily` (same pattern as Avalonia controls). You can set a font from your app or use the library default.
+The controls support `FontFamily` (same pattern as Avalonia® controls). You can set a font from your app or use the library default.
 
 Example: use an embedded font from your app:
 
-1. Add font file to your app project (for example `Assets/Fonts/MyFont.ttf`) and include it as an Avalonia resource in the app project file:
+1. Add font file to your app project (for example `Assets/Fonts/MyFont.ttf`) and include it as an Avalonia® resource in the app project file:
 
        <ItemGroup>
          <AvaloniaResource Include="Assets/Fonts/MyFont.ttf" />
@@ -339,7 +339,7 @@ Library default font: The library ships a default font and sets it in `Generic.a
 **Jittery or jumpy animations**
 
 - Avoid `DispatcherTimer` or `Task.Delay` for frame-sensitive animations.  
-- Use render-based updates (update animation state in `Render()` using elapsed time and call `InvalidateVisual()`), or use Avalonia composition animations.  
+- Use render-based updates (update animation state in `Render()` using elapsed time and call `InvalidateVisual()`), or use Avalonia® composition animations.  
 - If you must use timers, compute motion based on elapsed time (delta) rather than fixed increments.  
 
 **Needle or ring renders under text**
