@@ -17,6 +17,10 @@ A small, focused library of high-quality, render-based controls for Avalonia®.
   - Properties  
   - XAML example  
   - C# animation example  
+- LEDDisplay
+   - Features
+   - Properties
+   - XAML example
 - Layout example  
 - Custom fonts  
 - Designer vs runtime note  
@@ -197,6 +201,50 @@ A fully drawn gauge control with a needle, configurable sweep, glass effect and 
     }
 
 Recommendation: Avoid relying on `Task.Delay` for frame-perfect motion. Prefer updating the control from a render loop (use `InvalidateVisual()` and compute delta time with `Stopwatch`) or use Avalonia composition animations where possible.
+
+---
+
+## LEDDisplay
+
+A render-based seven-segment display control for showing numeric values with configurable digits, color, glow and segment thickness.
+---
+
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/LedDisplay.gif" width="300" />
+
+---
+
+### LEDDisplay — Features
+
+- Render-based seven-segment digits for crisp visuals
+- Configurable number of digits
+- Optional leading-zero display
+- Configurable segment color and thickness
+- Optional glow effect for active segments
+- Designer preview friendly
+
+### LEDDisplay — Properties
+
+| Property           | Type      | Default | Description                              |
+|-------------------|-----------|---------|------------------------------------------|
+| `Value`           | `int`     | `0`     | Numeric value shown on the display       |
+| `Digits`          | `int`     | `4`     | Number of digits                         |
+| `LeadingZeros`    | `bool`    | `true`  | Show zeros before the value              |
+| `Glow`            | `bool`    | `true`  | Enable glow around active segments       |
+| `SegmentOnColor`  | `Color`   | `Red`   | Color of active segments                |
+| `SegmentThickness`| `double`  | `1.0`   | Relative segment thickness               |
+
+### LEDDisplay — XAML example
+
+    <controls:LedDisplay
+        x:Name="LedDisplay"
+        Width="240"
+        Height="80"
+        Digits="4"
+        Value="1234"
+        LeadingZeros="True"
+        Glow="True"
+        SegmentOnColor="Red"
+        SegmentThickness="1.0"/>
 
 ---
 
