@@ -4,8 +4,8 @@
   
     <Design.PreviewWith>
 
-        <Border Background="LightGray" Padding="20">
-                <Grid ColumnDefinitions="*,*,*">
+        <Border Background="DarkGray" Padding="20">
+                <Grid ColumnDefinitions="*,*,*,*">
 
                     <!-- ProgressRing control -->
                     <local:ProgressRingControl
@@ -53,7 +53,16 @@
                         FontFamily="{StaticResource RobotoMonoFont}"
                         GlassEffect="True"
                          Grid.Column="2"/>
-
+                    <local:LedDisplay
+                        Width="300"
+                        Height="200"
+                        Digits="2"
+                        Glow="True"
+                        LeadingZeros="True"
+                        SegmentOnColor="DarkRed"
+                        SegmentThickness="0.7"
+                        Value="20"
+                        Grid.Column="3"/>
                 </Grid>
             </Border>
     </Design.PreviewWith>
@@ -70,6 +79,9 @@
                 <Border Background="Transparent"/>
             </ControlTemplate>
         </Setter>
+
+    </Style>
+    <Style Selector="local|LedDisplay">
 
     </Style>
     <Style Selector="local|ProgressRingControl">

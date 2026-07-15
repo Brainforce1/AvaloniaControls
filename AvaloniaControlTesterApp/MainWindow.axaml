@@ -4,10 +4,10 @@
     xmlns:local="clr-namespace:AvaloniaControlTesterApp"
 	xmlns:controls="clr-namespace:BrainForceOne.BrainforceControls;assembly=BrainForceOne.BrainforceControls"
     x:Class="AvaloniaControlTesterApp.MainWindow"
-    Width="700" Height="500"
+    Width="1400" Height="500"
     Background="#0B1A2A">
 
-	<Grid ColumnDefinitions="*,*,*">
+	<Grid ColumnDefinitions="*,*,*,*">
 
 		<controls:ProgressRingControl
 			x:Name="Ring"
@@ -55,6 +55,18 @@
                         FontFamily="{StaticResource RobotoMonoFont}"
                         GlassEffect="True"
                          Grid.Column="2"/>
+
+                    <controls:LedDisplay
+                        x:Name="LedDisplay"
+                        Width="300"
+                        Height="200"
+                        Digits="2"
+                        Glow="True"
+                        LeadingZeros="True"
+                        SegmentOnColor="DarkRed"
+                        SegmentThickness="0.7"
+                        Value="20"
+                        Grid.Column="3"/>
 	</Grid>
 
 </Window>

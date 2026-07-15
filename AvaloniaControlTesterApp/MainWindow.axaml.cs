@@ -14,17 +14,18 @@ namespace AvaloniaControlTesterApp
 
         private async void StartProgress()
         {
-            int duration = 10000; 
+            int duration = 10000;
             int steps = 100;
             int delay = duration / steps;
 
-            while (true) 
+            while (true)
             {
                 for (int i = 0; i <= 100; i++)
                 {
                     Ring.Progress = i;
                     Speedometer.Value = i + 30;
                     Thermometer.Value = i;
+                    LedDisplay.Value = i;
                     await Task.Delay(delay);
                 }
 
@@ -32,7 +33,8 @@ namespace AvaloniaControlTesterApp
                 Ring.Progress = 0;
                 Speedometer.Value = 30;
                 Thermometer.Value = 0;
-                await Task.Delay(300); 
+                LedDisplay.Value = 0;
+                await Task.Delay(300);
             }
         }
     }
