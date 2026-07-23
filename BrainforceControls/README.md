@@ -21,6 +21,14 @@ A small, focused library of high-quality, render-based controls for Avalonia®.
    - Features
    - Properties
    - XAML example
+- DialControl
+   - Features
+   - Properties
+   - XAML example
+- AvatarImage
+   - Features
+   - Properties
+   - XAML example
 - Layout example  
 - Custom fonts  
 - Designer vs runtime note  
@@ -245,6 +253,118 @@ A render-based seven-segment display control for showing numeric values with con
         Glow="True"
         SegmentOnColor="Red"
         SegmentThickness="1.0"/>
+
+---
+
+## DialControl
+
+A circular, interactive dial that displays a value on a 270-degree progress ring. The value can be changed by dragging vertically, scrolling the mouse wheel, or binding the `Value` property.
+---
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/DialControl.gif" width="300" />
+
+---
+### DialControl — Features
+
+- Interactive mouse drag and mouse-wheel value adjustment
+- Fine adjustment while dragging with the `Control` key
+- Configurable minimum and maximum value range
+- Customizable track, progress, disabled-progress, title, and value brushes
+- Optional progress-ring gradient with a configurable end brush
+- Configurable title, value format, text sizes, ring thickness, and font family
+- `ValueChanged` event for reacting to user changes
+- Designer preview friendly
+
+### DialControl — Properties
+
+| Property                  | Type      | Default       | Description                                      |
+|---------------------------|-----------|---------------|--------------------------------------------------|
+| `Disabled`                | `bool`    | `false`       | Disables pointer interaction and uses the disabled progress brush |
+| `Title`                   | `string`  | `Title`       | Text displayed above the value                  |
+| `Value`                   | `int`     | `0`           | Current dial value                               |
+| `Minimum`                 | `double`  | `0`           | Minimum value of the dial                        |
+| `Maximum`                 | `double`  | `100`         | Maximum value of the dial                        |
+| `RingThickness`           | `double`  | `12`          | Thickness of the track and progress ring         |
+| `TrackBrush`              | `IBrush`  | `LightGray`   | Brush used for the inactive track                |
+| `ProgressBrush`           | `IBrush`  | `DeepPink`    | Brush used for the active progress               |
+| `DisabledProgressBrush`   | `IBrush`  | `Gray`        | Brush used for active progress when disabled     |
+| `UseGradient`             | `bool`    | `false`       | Enables a gradient on the active progress ring   |
+| `GradientBrush`           | `IBrush`  | `White`       | End brush/color for the active progress gradient |
+| `ValueTextBrush`          | `IBrush`  | `LightGray`   | Brush used for the value text                    |
+| `ValueTextSize`           | `int`     | `46`          | Font size of the value text                      |
+| `ValueFormat`             | `string`  | `%`           | Text appended to the value                      |
+| `TitleTextBrush`          | `IBrush`  | `LightGray`   | Brush used for the title text                    |
+| `TitleTextSize`            | `int`     | `16`          | Font size of the title text                      |
+| `FontFamily`               | `FontFamily` | `Segoe UI` | Font family used for the title and value text    |
+| `Background`              | `IBrush?` | `Transparent` | Background used to make the control hit-testable |
+
+### DialControl — XAML example
+
+    <controls:DialControl
+        x:Name="Dial"
+        Width="240"
+        Height="240"
+        Title="Volume"
+        Minimum="0"
+        Maximum="100"
+        Value="65"
+        ValueFormat="%"
+        RingThickness="14"
+        TrackBrush="#334455"
+        ProgressBrush="DeepPink"
+        UseGradient="True"
+        GradientBrush="Orange"
+        ValueTextBrush="White"
+        TitleTextBrush="LightGray"
+        ValueTextSize="44"
+        TitleTextSize="16"
+        FontFamily="Segoe UI"/>
+
+---
+
+## AvatarImage
+
+A circular avatar control that loads an image from an HTTP(S) URL or a local file path. While an image is loading, it displays an animated ring; if no image is available, it displays the configured placeholder brush.
+---
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/AvatarImage.gif" width="300" />
+
+---
+
+### AvatarImage — Features
+
+- Circular image rendering with automatic center cropping
+- Supports HTTP(S) URLs and local file paths
+- In-memory image caching by URL or path
+- Animated loading ring with optional visibility
+- Optional glass reflection effect over the loaded image
+- Configurable ring, placeholder, and glass overlay brushes
+- Designer preview friendly
+
+### AvatarImage — Properties
+
+| Property                | Type      | Default                  | Description                                      |
+|-------------------------|-----------|--------------------------|--------------------------------------------------|
+| `ImageUrl`              | `string?` | `null`                   | HTTP(S) URL or local file path of the image      |
+| `RingBrush`             | `IBrush`  | `DeepSkyBlue`            | Brush used for the loading ring                  |
+| `RingThickness`         | `double`  | `4`                      | Thickness of the loading ring and image inset    |
+| `PlaceholderBrush`      | `IBrush`  | `LightGray`              | Brush shown while the image is unavailable       |
+| `GlassEffect`           | `bool`    | `false`                  | Enables the glass reflection effect              |
+| `GlassOverlayBrush`     | `IBrush`  | `#28FFFFFF`              | Configurable glass overlay brush                 |
+| `HideLoadingRing`       | `bool`    | `false`                  | Hides the animated ring while the image loads    |
+| `DelayForLoadTest`      | `int`     | `0`                      | Debug-only loading delay in milliseconds for tests |
+
+### AvatarImage — XAML example
+
+    <controls:AvatarImage
+        Width="128"
+        Height="128"
+        ImageUrl="https://example.com/images/avatar.png"
+        RingBrush="DeepSkyBlue"
+        RingThickness="5"
+        PlaceholderBrush="#263238"
+        GlassEffect="True"
+        HideLoadingRing="False"/>
+
+For a local image, set `ImageUrl` to a local file path instead of an HTTP(S) URL. `DelayForLoadTest` is honored only in DEBUG builds and is intended for testing loading states.
 
 ---
 

@@ -9,8 +9,17 @@ namespace AvaloniaControlTesterApp
         {
             InitializeComponent();
 
+            AvatarImage.ImageUrl = $"https://avatars.githubusercontent.com/u/1";
+            DialCtrl.ValueChanged += DialControl_ValueChanged;
             StartProgress();
         }
+
+        private void DialControl_ValueChanged(object? sender, int newValue)
+        {
+            AvatarImage.ImageUrl = $"https://avatars.githubusercontent.com/u/{DialCtrl.Value}";
+            AvatarImage.InvalidateVisual();
+        }
+
 
         private async void StartProgress()
         {

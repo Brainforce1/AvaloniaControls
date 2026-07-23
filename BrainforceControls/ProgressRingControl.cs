@@ -2,7 +2,6 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Media;
-using Avalonia.Threading;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

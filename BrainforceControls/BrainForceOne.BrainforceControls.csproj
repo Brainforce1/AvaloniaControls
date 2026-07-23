@@ -6,11 +6,11 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 	  <!-- NuGet metadata -->
 	  <PackageId>BrainforceControls</PackageId>
-	  <Version>1.3.0</Version>
+	  <Version>1.4.1</Version>
 	  <Authors>BrainForceOne</Authors>
 	  <Company>BrainForce1</Company>
 	  <Description>Collection of controls for Avalonia®</Description>
-	  <PackageTags>avalonia;controls;ui;progress;ring;speedometer;thermometer;leddisplay</PackageTags>
+	  <PackageTags>avalonia;controls;ui;progress;ring;speedometer;thermometer;leddisplay;dial;avatar;image</PackageTags>
 	  <RepositoryUrl>https://github.com/Brainforce1/AvaloniaControls</RepositoryUrl>
 	  <PackageProjectUrl>https://www.nuget.org/packages/BrainforceControls/</PackageProjectUrl>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -52,6 +52,5 @@
 		<None Include="README.md" Pack="true" PackagePath="" />
 		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="docs\images\**\*.*" Pack="false" PackagePath="" />
-		<None Include="Assets\Skins\**\*.*" Pack="false" PackagePath="" />
 	</ItemGroup>
 </Project>
