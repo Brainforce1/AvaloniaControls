@@ -260,7 +260,7 @@ A render-based seven-segment display control for showing numeric values with con
 
 A circular, interactive dial that displays a value on a 270-degree progress ring. The value can be changed by dragging vertically, scrolling the mouse wheel, or binding the `Value` property.
 ---
-<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/DialControl.gif" width="300" />
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/AvatarImage.gif" width="300" />
 
 ---
 ### DialControl — Features
@@ -325,7 +325,7 @@ A circular, interactive dial that displays a value on a 270-degree progress ring
 
 A circular avatar control that loads an image from an HTTP(S) URL or a local file path. While an image is loading, it displays an animated ring; if no image is available, it displays the configured placeholder brush.
 ---
-<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/AvatarImage.gif" width="300" />
+<img src="https://raw.githubusercontent.com/Brainforce1/AvaloniaControls/refs/heads/master/BrainforceControls/docs/images/DialControl.gif" width="300" />
 
 ---
 
